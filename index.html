@@ -9,16 +9,16 @@
   <title>CrazyRubic - Official Website</title>
 
   <style>
-    /* Theme Colors (Sleek, Minimal) */
+    /* THEME COLORS */
     :root {
-      --blue: #7396E3;   /* RGB(115, 150, 227) */
-      --gold: #F7D849;  /* RGB(247, 216, 73) */
-      --white: #ffffff;
-      --dark: #333333;
+      --gold: #F7D849;  /* Vibrant Gold */
+      --black: #111111; /* Deep Black for text */
+      --white: #ffffff; /* White background */
+      --dark-grey: #333333;
       --light-grey: #f8f8f8;
     }
 
-    /* Base Reset & Body */
+    /* RESET & BASE */
     * {
       margin: 0;
       padding: 0;
@@ -27,19 +27,19 @@
     body {
       font-family: "Verdana", sans-serif;
       background-color: var(--white);
-      color: var(--dark);
+      color: var(--black);
       line-height: 1.4;
     }
 
-    /* Header */
+    /* HEADER */
     header {
+      background-color: var(--gold);
+      color: var(--black);
       text-align: center;
-      background-color: var(--blue);
-      color: var(--white);
       padding: 2em 1em;
     }
     header img {
-      max-width: 140px;
+      max-width: 130px;
       margin-bottom: 0.75em;
     }
     header h1 {
@@ -48,23 +48,22 @@
       letter-spacing: 1px;
     }
 
-    /* Main Container */
+    /* MAIN CONTAINER */
     main {
       max-width: 900px;
       margin: 2em auto;
       padding: 0 1em;
     }
 
-    /* Promo Text (Tagline) */
+    /* PROMO TEXT */
     .promo-text {
       text-align: center;
-      font-size: 1.25em;
+      font-size: 1.2em;
       font-weight: bold;
-      color: var(--blue);
       margin-bottom: 1.5em;
     }
 
-    /* Description Text */
+    /* GAME DESCRIPTION */
     .description {
       text-align: center;
       margin-bottom: 2em;
@@ -73,43 +72,45 @@
       margin-bottom: 1em;
     }
 
-    /* Section Title */
+    /* SECTION TITLES */
     .section-title {
       font-size: 1.2em;
-      color: var(--blue);
+      color: var(--dark-grey);
       border-left: 6px solid var(--gold);
-      padding-left: 10px;
+      padding-left: 12px;
       margin: 2em 0 1.2em 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    /* Video Container */
+    /* VIDEO CONTAINER */
     .video-container {
       display: flex;
       justify-content: center;
       margin-bottom: 2em;
     }
     .video-container video {
-      width: 80%;
-      max-width: 600px;
-      border: 2px solid #ddd;
+      width: 100%;
+      max-width: 500px; /* Smaller video size */
+      border: 2px solid var(--light-grey);
       border-radius: 6px;
     }
 
-    /* Screenshot Gallery */
+    /* SCREENSHOTS GALLERY */
     .screenshots {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 16px;
       justify-content: center;
       margin-bottom: 2em;
     }
     .screenshots img {
-      max-width: 200px;
-      border: 2px solid #ddd;
+      border: 2px solid var(--light-grey);
       border-radius: 6px;
+      max-width: 180px;
     }
 
-    /* App Store Link */
+    /* APP STORE LINK (Gold button, black text) */
     .appstore-link-wrapper {
       text-align: center;
       margin: 2em 0;
@@ -117,7 +118,7 @@
     .appstore-link {
       display: inline-block;
       background-color: var(--gold);
-      color: var(--blue);
+      color: var(--black);
       text-decoration: none;
       font-weight: bold;
       padding: 0.75em 1.5em;
@@ -126,49 +127,55 @@
       transition: background-color 0.3s, color 0.3s;
     }
     .appstore-link:hover {
-      background-color: var(--blue);
+      background-color: var(--black);
       color: var(--white);
     }
 
-    /* Official Links Section */
+    /* LINKS SECTION */
     .links-container {
       text-align: center;
       margin-bottom: 2em;
       line-height: 1.6;
     }
     .links-container a {
-      color: var(--blue);
-      font-weight: bold;
+      color: var(--black);
+      background-color: var(--gold);
+      padding: 0.5em 1em;
+      border-radius: 4px;
       text-decoration: none;
-      border-bottom: 1px dashed var(--gold);
+      font-weight: bold;
+      transition: opacity 0.3s;
+      border: 2px solid var(--gold);
     }
     .links-container a:hover {
-      text-decoration: underline;
+      opacity: 0.8;
+    }
+    .links-container p {
+      margin: 0.5em 0;
     }
 
-    /* Footer */
+    /* FOOTER */
     footer {
+      background-color: var(--gold);
+      color: var(--black);
       text-align: center;
-      background-color: var(--blue);
-      color: var(--white);
-      padding: 1.5em 1em;
+      padding: 1.5em;
+      margin-top: 3em;
     }
     footer p {
       margin-bottom: 0.3em;
     }
     footer a {
-      color: #ddd;
+      color: var(--black);
       text-decoration: none;
+      font-weight: bold;
     }
     footer a:hover {
-      color: var(--white);
+      text-decoration: underline;
     }
 
-    /* Responsive Adjustments */
+    /* RESPONSIVE */
     @media (max-width: 600px) {
-      .video-container video {
-        width: 100%;
-      }
       .screenshots img {
         max-width: 100%;
       }
@@ -184,35 +191,30 @@
     <h1>CrazyRubic</h1>
   </header>
 
-  <!-- MAIN -->
+  <!-- MAIN CONTENT -->
   <main>
     <!-- PROMO TEXT -->
     <div class="promo-text">
-      Spin, Dodge &amp; Survive in a Volcanic Battlefield!
+      Spin, Dodge &amp; Survive in the Volcanic Chaos!
     </div>
 
-    <!-- GAME DESCRIPTION -->
+    <!-- DESCRIPTION -->
     <div class="description">
       <p>
-        Enter the fiery realm of CrazyRubic, where each second counts. 
-        Swipe and spin your cube to dodge incoming lava shards, 
-        while aiming for the highest reach. This is fast-paced gaming 
-        with adrenaline-packed challenges on every turn!
+        Prepare your wits and reflexes as you swirl through a lava-scorched world.
+        In CrazyRubic, every second is a chance to climb higher, dodge faster, 
+        and outlast the storm of molten obstacles.
       </p>
       <p>
-        Ready to become a volcanic survivor? Embrace the chaos, master 
-        your reflexes, and climb to the stars.
+        Ready to test your skills? Challenge the chaos and see how long you can survive.
       </p>
       <p>
-        By downloading or using this app, you agree to the Apple Standard EULA:
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">
-          EULA Details
-        </a>
+        By using this app, you agree to the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple Standard EULA</a>.
       </p>
     </div>
 
-    <!-- PROMO VIDEO -->
-    <h2 class="section-title">Watch the Action</h2>
+    <!-- VIDEO -->
+    <h2 class="section-title">Game Preview</h2>
     <div class="video-container">
       <video controls poster="1.jpeg">
         <source src="promo.mp4" type="video/mp4">
@@ -221,21 +223,21 @@
     </div>
 
     <!-- SCREENSHOTS -->
-    <h2 class="section-title">Explore Screenshots</h2>
+    <h2 class="section-title">Screenshots</h2>
     <div class="screenshots">
-      <img src="1.jpeg" alt="CrazyRubic Screenshot 1">
-      <img src="2.jpeg" alt="CrazyRubic Screenshot 2">
-      <img src="3.jpeg" alt="CrazyRubic Screenshot 3">
-      <img src="4.jpeg" alt="CrazyRubic Screenshot 4">
-      <img src="5.jpeg" alt="CrazyRubic Screenshot 5">
-      <img src="6.jpeg" alt="CrazyRubic Screenshot 6">
-      <img src="7.jpeg" alt="CrazyRubic Screenshot 7">
-      <img src="8.jpeg" alt="CrazyRubic Screenshot 8">
-      <img src="9.jpeg" alt="CrazyRubic Screenshot 9">
-      <img src="10.jpeg" alt="CrazyRubic Screenshot 10">
+      <img src="1.jpeg" alt="Screenshot 1">
+      <img src="2.jpeg" alt="Screenshot 2">
+      <img src="3.jpeg" alt="Screenshot 3">
+      <img src="4.jpeg" alt="Screenshot 4">
+      <img src="5.jpeg" alt="Screenshot 5">
+      <img src="6.jpeg" alt="Screenshot 6">
+      <img src="7.jpeg" alt="Screenshot 7">
+      <img src="8.jpeg" alt="Screenshot 8">
+      <img src="9.jpeg" alt="Screenshot 9">
+      <img src="10.jpeg" alt="Screenshot 10">
     </div>
 
-    <!-- APP STORE LINK -->
+    <!-- APP STORE LINK BUTTON -->
     <div class="appstore-link-wrapper">
       <a 
         class="appstore-link" 
@@ -246,19 +248,13 @@
       </a>
     </div>
 
-    <!-- OFFICIAL LINKS: Privacy & Attribution -->
+    <!-- PRIVACY & ATTRIBUTION LINKS -->
     <div class="links-container">
       <p>
-        <strong>Privacy Policy:</strong>
-        <a href="https://artur-dobysh.github.io/CrazyRubic_Privacy_Policy/" target="_blank">
-          Read Here
-        </a>
+        <a href="https://artur-dobysh.github.io/CrazyRubic_Privacy_Policy/" target="_blank">Privacy Policy</a>
       </p>
       <p>
-        <strong>Attribution &amp; Credits:</strong>
-        <a href="https://artur-dobysh.github.io/CrazyRubic_Attribution/" target="_blank">
-          View Details
-        </a>
+        <a href="https://artur-dobysh.github.io/CrazyRubic_Attribution/" target="_blank">Attribution &amp; Credits</a>
       </p>
     </div>
   </main>
@@ -270,4 +266,5 @@
 
 </body>
 </html>
+
 
