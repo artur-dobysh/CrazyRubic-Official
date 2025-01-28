@@ -232,6 +232,200 @@
 
     /* 
       ===============================
+      HEROES & PLANETS SECTION
+      ===============================
+    */
+    .heroes-planets-section p,
+    .heroes-planets-section ul {
+      margin-bottom: 1rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .heroes-planets-section ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+
+    /* 
+      ===============================
+      PERKS & POWER-UPS SECTION
+      ===============================
+    */
+    .perks-section p,
+    .perks-section ul {
+      margin-bottom: 1rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .perks-section ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+
+    /* 
+      ===============================
+      DETAILED GAMEPLAY SECTION
+      ===============================
+    */
+    .detailed-gameplay {
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+      line-height: 1.5;
+    }
+    .detailed-gameplay h3 {
+      color: var(--accent-red);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: var(--h3-size);
+      text-transform: uppercase;
+    }
+    .detailed-gameplay p {
+      margin-bottom: 1rem;
+    }
+    .detailed-gameplay li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* 
+      ===============================
+      MONSTERS & BOSSES SECTION
+      ===============================
+    */
+    .monsters-bosses-section {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+    .monster-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .monster-card {
+      background-color: var(--light-grey);
+      border-radius: 6px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .monster-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+    .monster-card h4 {
+      margin-bottom: 0.25rem;
+      font-size: var(--p-size);
+      color: var(--black);
+    }
+    .monster-card p {
+      font-size: 0.9rem;
+      color: var(--dark-grey);
+      line-height: 1.3;
+    }
+
+    /* 
+      ===============================
+      FAQ SECTION
+      ===============================
+    */
+    .faq-section {
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+    }
+    .faq-section .faq-item {
+      margin-bottom: 1.5rem;
+    }
+    .faq-section .faq-question {
+      font-weight: bold;
+      color: var(--accent-red);
+      margin-bottom: 0.5rem;
+    }
+    .faq-section .faq-answer {
+      margin-left: 1rem;
+      color: var(--dark-grey);
+    }
+
+    /* 
+      ===============================
+      SHOP & SUBSCRIPTIONS SECTION
+      ===============================
+    */
+    .shop-subscription-section {
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+      text-align: center;
+    }
+    .shop-items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .shop-card {
+      background-color: var(--light-grey);
+      border-radius: 6px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .shop-card h4 {
+      margin-bottom: 0.5rem;
+      color: var(--accent-red);
+    }
+    .shop-card p {
+      font-size: 0.9rem;
+      color: var(--dark-grey);
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+    .shop-button {
+      display: inline-block;
+      background-color: var(--gold);
+      color: var(--black);
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    .shop-button:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+
+    /* 
+      ===============================
+      NEWS/UPDATES SECTION
+      ===============================
+    */
+    .news-section {
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+    }
+    .news-item {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: var(--light-grey);
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .news-item h4 {
+      margin-bottom: 0.5rem;
+      color: var(--accent-red);
+      font-size: var(--h3-size);
+    }
+    .news-item p {
+      font-size: 0.9rem;
+      color: var(--dark-grey);
+      line-height: 1.4;
+    }
+
+    /* 
+      ===============================
       VIDEO SECTION
       ===============================
     */
@@ -347,7 +541,6 @@
       gap: 2rem;
       margin-bottom: 4rem;
     }
-
     .links-box {
       background-color: var(--light-grey);
       border-radius: 6px;
@@ -539,16 +732,38 @@
       </div>
     </section>
 
-    <!-- NEW: HEROES & PLANETS SECTION -->
-    <section>
+    <!-- DETAILED GAMEPLAY SECTION -->
+    <section class="detailed-gameplay">
+      <h2 class="section-title">Detailed Gameplay</h2>
+      <p>
+        CrazyRubic is about careful timing, quick reflexes, and on-the-fly decision-making. As you move forward across dangerous terrain, lava rises, and new waves of enemies appear.
+      </p>
+      <h3>Combo System</h3>
+      <p>
+        Each monster you defeat increases your combo meter. String together multiple monster kills without getting hit to unlock special streak rewards—like bonus coins or a short burst of invincibility.
+      </p>
+      <h3>Level Progression</h3>
+      <ul>
+        <li><strong>Obstacle Count:</strong> Each obstacle destroyed ramps up the difficulty.</li>
+        <li><strong>Monster Slay Rewards:</strong> Slaying monsters quickly can trigger “combo!” popups and big coin multipliers.</li>
+        <li><strong>Adaptive Speed:</strong> As you survive longer, your hero speeds up, and lava obstacles become more frequent.</li>
+      </ul>
+      <h3>Randomized Hazards</h3>
+      <p>
+        Watch out for chasing meteors, random lava pits, and dynamic lava blocks. No two runs are alike!
+      </p>
+    </section>
+
+    <!-- HEROES & PLANETS SECTION -->
+    <section class="heroes-planets-section">
       <h2 class="section-title">Heroes &amp; Planets</h2>
-      <p style="text-align:center; max-width: 700px; margin: 0 auto 2rem;">
+      <p>
         From celestial guardians to volcanic warriors, each Rubic hero boasts a unique theme and lore. 
         Travel across different planets, each adding distinct visuals and lava types to test your skill.
       </p>
       
-      <h3 style="margin-bottom:1rem;">Heroes</h3>
-      <ul style="list-style:none; padding-left:0; margin-bottom:2rem;">
+      <h3>Heroes</h3>
+      <ul>
         <li><strong>Tiger Stone Rubic</strong> – Fierce amber stripes conjure primal jungle spirits.</li>
         <li><strong>Silver Rubic</strong> – Lunar metal that reflects blows like moonlight.</li>
         <li><strong>Lapis Lazuli Rubic</strong> – Forged in ocean depths, harnesses tidal spells.</li>
@@ -566,12 +781,12 @@
         <li><strong>Rainbow Rubic</strong> – Prismatic blasts warp reality with kaleidoscopic illusions.</li>
       </ul>
 
-      <h3 style="margin-bottom:1rem;">Planets</h3>
-      <p style="margin-bottom:1rem;">
+      <h3>Planets</h3>
+      <p>
         Each planet you choose alters the environment’s color palette and lava type – from molten magma to toxic sludge or icy flows. 
         Survive Mercury’s scorching surface, dodge acidic hazards on Venus, or leap through the frost-lava pits of Neptune!
       </p>
-      <ul style="list-style:disc; padding-left:1.5rem;">
+      <ul>
         <li><strong>Moon:</strong> Cratered satellite with lower gravity feel.</li>
         <li><strong>Mercury:</strong> Scorched and rocky, with standard magma.</li>
         <li><strong>Venus:</strong> Blazing greenhouse with toxic “magma_toxic” flows.</li>
@@ -584,21 +799,124 @@
       </ul>
     </section>
 
-    <!-- NEW: PERKS & POWER-UPS SECTION -->
-    <section>
+    <!-- PERKS & POWER-UPS SECTION -->
+    <section class="perks-section">
       <h2 class="section-title">Perks &amp; Power-Ups</h2>
-      <p style="text-align:center; max-width: 700px; margin: 0 auto 2rem;">
+      <p>
         Enhance your runs with special perks and on-the-fly power-ups. Earn coins to unlock new perks, or watch ads for extra boosts.
       </p>
-      <ul style="list-style:disc; padding-left:1.5rem; margin-bottom:2rem;">
+      <ul>
         <li><strong>Extra Life:</strong> Defy death once more! Automatically revives you upon losing a run. Great for extending record-breaking attempts.</li>
         <li><strong>Slowdown:</strong> Temporarily reduces all movement speed, making dodges easier when chaos peaks.</li>
         <li><strong>Shield:</strong> Grants a protective barrier that negates one hit from lava or obstacles.</li>
       </ul>
-      <p style="text-align:center; max-width: 700px; margin: 0 auto;">
+      <p>
         Perks can be acquired with in-game gold or occasionally won by watching rewarded ads. 
         Access the in-game Shop to purchase coin packs or subscribe to remove ads (and earn bonus heroes &amp; planets).
       </p>
+    </section>
+
+    <!-- MONSTERS & BOSSES SECTION -->
+    <section class="monsters-bosses-section">
+      <h2 class="section-title">Monsters &amp; Bosses</h2>
+      <p>
+        From low-level grunts to levitating horrors, CrazyRubic’s monsters keep each run unpredictable. 
+        Mid-run bosses or special “Chasing Lava Meteors” add that extra layer of challenge.
+      </p>
+      <div class="monster-grid">
+        <!-- Example monster cards (You can replace images with actual ones) -->
+        <div class="monster-card">
+          <img src="monster_green.png" alt="Green Monster">
+          <h4>Green Jumper</h4>
+          <p>Bounces around unpredictably, can be levitated. Watch out for group ambushes!</p>
+        </div>
+        <div class="monster-card">
+          <img src="monster_purple.png" alt="Purple Monster">
+          <h4>Purple Floater</h4>
+          <p>Glides in mid-air, perfecting swoop attacks if you’re not paying attention.</p>
+        </div>
+        <div class="monster-card">
+          <img src="eye.png" alt="Floating Eye">
+          <h4>All-Seeing Eye</h4>
+          <p>Launches homing beams and can detect your position from a distance.</p>
+        </div>
+      </div>
+      <p>
+        Defeat monsters quickly for **Combo Bonuses**, or risk letting them swarm you as the lava creeps up!
+      </p>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">Is CrazyRubic free-to-play?</div>
+        <div class="faq-answer">Yes! You can download and play for free. Optional perks, coin packs, and subscriptions are available.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">How do I unlock more heroes?</div>
+        <div class="faq-answer">
+          Earn coins through gameplay or by watching ads, then purchase heroes from the in-game Shop. Some are also unlocked via subscription.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do I need an internet connection?</div>
+        <div class="faq-answer">
+          You can play offline, but you'll need internet to access leaderboards, watch rewarded ads, or make in-app purchases.
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP & SUBSCRIPTIONS SECTION -->
+    <section class="shop-subscription-section">
+      <h2 class="section-title">Shop &amp; Subscriptions</h2>
+      <p>
+        Power up your runs with exclusive coin packs and remove ads forever by subscribing. Unlock special bonus heroes and planets.
+      </p>
+      <div class="shop-items-grid">
+        <!-- Example items; adapt to your real store offerings -->
+        <div class="shop-card">
+          <h4>No Ads</h4>
+          <p>Monthly subscription that removes all ads and grants bonus Mercury Planet &amp; Silver Rubic.</p>
+          <a href="#" class="shop-button">Subscribe</a>
+        </div>
+        <div class="shop-card">
+          <h4>4,000 Coins</h4>
+          <p>Pick up a handy stash to buy perks or heroic gear!</p>
+          <a href="#" class="shop-button">Buy Now</a>
+        </div>
+        <div class="shop-card">
+          <h4>10,000 Coins</h4>
+          <p>Supercharge your progress with more coins in one go.</p>
+          <a href="#" class="shop-button">Buy Now</a>
+        </div>
+        <div class="shop-card">
+          <h4>15,000 Coins</h4>
+          <p>Conquer the galaxy with a massive stack of gold!</p>
+          <a href="#" class="shop-button">Buy Now</a>
+        </div>
+      </div>
+      <p style="font-size: 0.9rem; color: var(--dark-grey); margin-top:1rem;">
+        Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period.
+      </p>
+    </section>
+
+    <!-- NEWS / UPDATES SECTION -->
+    <section class="news-section">
+      <h2 class="section-title">News &amp; Updates</h2>
+
+      <div class="news-item">
+        <h4>Patch 1.1 - “Lunar Invasion”</h4>
+        <p>We’ve introduced a new boss for Moon travelers: The Lunar Leviathan! Collect brand-new cosmetic items, fix performance bugs, and enjoy improved monster animations.</p>
+      </div>
+
+      <div class="news-item">
+        <h4>Coming Soon: Saturn Rings Event!</h4>
+        <p>Compete in special ring-jumping challenges on Saturn. Double combos for each successful ring dash, plus limited-time cosmic cosmetics.</p>
+      </div>
     </section>
 
     <!-- VIDEO SECTION -->
@@ -693,6 +1011,8 @@
     <p>© 2025 Artur Dobysh. All Rights Reserved.</p>
   </footer>
 </body>
+</html>
+
 </html>
 
 
