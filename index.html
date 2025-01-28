@@ -320,12 +320,20 @@
       HEROES & PLANETS SECTION
       ===============================
     */
+    .heroes-planets-section {
+      margin-bottom: 3rem;
+    }
+    /* 
+      We'll wrap all content in a .hp-inner container 
+      to ensure headings align with text.
+    */
+    .hp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
     .heroes-planets-section p,
     .heroes-planets-section ul {
       margin-bottom: 1rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
     }
     .heroes-planets-section ul {
       list-style: disc;
@@ -741,30 +749,32 @@
     <!-- HEROES & PLANETS SECTION -->
     <section class="heroes-planets-section">
       <h2 class="section-title">Heroes &amp; Planets</h2>
-      <p>
-        From celestial guardians to volcanic warriors, each Rubic hero has unique lore. 
-        Choose your planet environment—from Mercury’s scorching wastes to Neptune’s icy plains—for fresh challenges.
-      </p>
+      <div class="hp-inner">
+        <p>
+          From celestial guardians to volcanic warriors, each Rubic hero has unique lore. 
+          Choose your planet environment—from Mercury’s scorching wastes to Neptune’s icy plains—for fresh challenges.
+        </p>
 
-      <h3 class="sub-heading">Heroes</h3>
-      <ul>
-        <li><strong>Tiger Stone Rubic</strong> – Fierce amber stripes conjure primal spirits.</li>
-        <li><strong>Silver Rubic</strong> – Lunar metal that reflects blows like moonlight.</li>
-        <li><strong>Lapis Lazuli Rubic</strong> – Harnesses tidal spells from ocean depths.</li>
-        <li><strong>... plus more unique hero forms!</strong></li>
-      </ul>
+        <h3 class="sub-heading">Heroes</h3>
+        <ul>
+          <li><strong>Tiger Stone Rubic</strong> – Fierce amber stripes conjure primal spirits.</li>
+          <li><strong>Silver Rubic</strong> – Lunar metal that reflects blows like moonlight.</li>
+          <li><strong>Lapis Lazuli Rubic</strong> – Harnesses tidal spells from ocean depths.</li>
+          <li><strong>... plus more unique hero forms!</strong></li>
+        </ul>
 
-      <h3 class="sub-heading">Planets</h3>
-      <p>
-        Every planet changes the lava type and background aesthetic. Brave Mercury’s scorching surface or hop among Saturn’s rings—each location demands new strategies.
-      </p>
-      <ul>
-        <li><strong>Moon:</strong> Lower gravity, cratered landscapes.</li>
-        <li><strong>Venus:</strong> Toxic fumes and blazing greenhouse effect.</li>
-        <li><strong>Mars:</strong> Rusty deserts, swirling dust devils.</li>
-        <li><strong>Neptune:</strong> Freezing storms with “magma_ice” hazards.</li>
-        <li><strong>And more!</strong></li>
-      </ul>
+        <h3 class="sub-heading">Planets</h3>
+        <p>
+          Every planet changes the lava type and background aesthetic. Brave Mercury’s scorching surface or hop among Saturn’s rings—each location demands new strategies.
+        </p>
+        <ul>
+          <li><strong>Moon:</strong> Lower gravity, cratered landscapes.</li>
+          <li><strong>Venus:</strong> Toxic fumes and blazing greenhouse effect.</li>
+          <li><strong>Mars:</strong> Rusty deserts, swirling dust devils.</li>
+          <li><strong>Neptune:</strong> Freezing storms with “magma_ice” hazards.</li>
+          <li><strong>And more!</strong></li>
+        </ul>
+      </div>
     </section>
 
     <!-- PERKS & POWER-UPS SECTION -->
@@ -788,7 +798,6 @@
         Defeating multiple enemies quickly can yield big combos or special drops.
       </p>
       <div class="monster-grid">
-        <!-- Updated monster images with sub-heading style already used above -->
         <div class="monster-card">
           <img src="brown.png" alt="Brown Monster">
           <h4>Brown Crusher</h4>
@@ -921,10 +930,3 @@
   </footer>
 </body>
 </html>
-
-
-
-</html>
-
-
-
