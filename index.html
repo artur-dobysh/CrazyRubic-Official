@@ -67,7 +67,7 @@
         rgba(247,201,67, 0.95),
         rgba(230,76,60, 0.95)
       ), 
-      url("hero-bg.jpeg") center/cover no-repeat; 
+      url("hero-bg.jpeg") center/cover no-repeat;
       /* NOTE: Replace 'hero-bg.jpeg' with a suitable background image */
       padding: 4rem 1rem;
       text-align: center;
@@ -167,11 +167,12 @@
     .video-container {
       display: inline-block;
       width: 100%;
-      max-width: 600px;
+      max-width: 400px; /* Smaller video preview */
       position: relative;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       border-radius: 6px;
       overflow: hidden;
+      margin: 0 auto;
     }
     .video-container video {
       width: 100%;
@@ -194,6 +195,35 @@
       object-fit: cover;
       border-radius: 6px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    /* 
+      ===============================
+      FEATURES SECTION (OPTIONAL EXAMPLE)
+      ===============================
+    */
+    .features-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .feature-card {
+      flex: 1 1 250px;
+      background: var(--light-grey);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .feature-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: var(--accent-red);
+    }
+    .feature-card p {
+      font-size: 0.95rem;
     }
 
     /* 
@@ -226,25 +256,43 @@
       LINKS SECTION
       ===============================
     */
-    .links-container {
-      text-align: center;
+    .links-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
       margin-bottom: 4rem;
-      font-size: var(--small-size);
     }
-    .links-container p {
+
+    .links-box {
+      background-color: var(--light-grey);
+      border-radius: 6px;
+      padding: 1rem 2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 300px;
+      width: 100%;
+    }
+    .links-box h3 {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: var(--black);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .links-box a {
+      display: inline-block;
       margin: 0.5rem 0;
-    }
-    .links-container a {
+      padding: 0.5rem 1rem;
       color: var(--black);
       background-color: var(--gold);
-      padding: 0.5rem 1rem;
       border-radius: 4px;
       font-weight: bold;
       border: 2px solid var(--gold);
       transition: opacity 0.3s;
       text-decoration: none;
     }
-    .links-container a:hover {
+    .links-box a:hover {
       opacity: 0.8;
     }
 
@@ -284,6 +332,10 @@
       .section-title::before {
         width: 30px;
       }
+      .features-section {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
@@ -308,12 +360,31 @@
       </p>
       <p>
         Earn your spot at the top of the global leaderboard, master your spins, and dominate 
-        the volcanic chaos. How long will you survive?
+        the volcanic chaos. How long can you survive?
       </p>
       <p>
         By using this app, you agree to the 
         <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple Standard EULA</a>.
       </p>
+    </section>
+
+    <!-- OPTIONAL: FEATURES SECTION -->
+    <section>
+      <h2 class="section-title">Why You'll Love It</h2>
+      <div class="features-section">
+        <div class="feature-card">
+          <h3>Fast-Paced Action</h3>
+          <p>Experience quick, heart-pounding gameplay that tests your reflexes and keeps you on the edge of your seat.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Global Leaderboards</h3>
+          <p>Compete with players from around the world. Climb the charts and prove you’re the ultimate CrazyRubic master.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Ever-Evolving Challenges</h3>
+          <p>Dodge new hazards and master fresh obstacles as you progress. No run is ever the same!</p>
+        </div>
+      </div>
     </section>
 
     <!-- VIDEO SECTION -->
@@ -355,14 +426,20 @@
       </a>
     </section>
 
-    <!-- PRIVACY & ATTRIBUTION LINKS -->
-    <section class="links-container">
-      <p>
-        <a href="https://artur-dobysh.github.io/CrazyRubic_Privacy_Policy/" target="_blank">Privacy Policy</a>
-      </p>
-      <p>
-        <a href="https://artur-dobysh.github.io/CrazyRubic_Attribution/" target="_blank">Attribution &amp; Credits</a>
-      </p>
+    <!-- PRIVACY & ATTRIBUTION LINKS (SEPARATED) -->
+    <section class="links-section">
+      <div class="links-box">
+        <h3>Privacy Policy</h3>
+        <a href="https://artur-dobysh.github.io/CrazyRubic_Privacy_Policy/" target="_blank">
+          View Policy
+        </a>
+      </div>
+      <div class="links-box">
+        <h3>Attribution &amp; Credits</h3>
+        <a href="https://artur-dobysh.github.io/CrazyRubic_Attribution/" target="_blank">
+          View Credits
+        </a>
+      </div>
     </section>
   </main>
 
@@ -372,4 +449,5 @@
   </footer>
 </body>
 </html>
+
 
