@@ -9,262 +9,367 @@
   <title>CrazyRubic - Official Website</title>
 
   <style>
-    /* THEME COLORS */
+    /* 
+      ===============================
+      GLOBAL COLORS & FONTS 
+      ===============================
+    */
     :root {
-      --gold: #F7D849;  /* Vibrant Gold */
-      --black: #111111; /* Deep Black for text */
-      --white: #ffffff; /* White background */
+      --gold: #F7C943;         /* Brighter Gold */
+      --black: #141414;        /* Darker Black */
+      --white: #FFFFFF;
       --dark-grey: #333333;
-      --light-grey: #f8f8f8;
+      --light-grey: #F0F0F0;
+      --accent-red: #E64C3C;   /* Accent color to complement gold */
+      
+      /* Font sizing scale */
+      --base-font-size: 16px;
+      --h1-size: 2rem;
+      --h2-size: 1.5rem;
+      --p-size: 1rem;
+      --small-size: 0.875rem;
     }
 
-    /* RESET & BASE */
+    /* 
+      ===============================
+      RESET & GLOBAL STYLES
+      ===============================
+    */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+    html {
+      font-size: var(--base-font-size);
+      scroll-behavior: smooth;
+    }
     body {
       font-family: "Verdana", sans-serif;
       background-color: var(--white);
       color: var(--black);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 
+      ===============================
+      HEADER / HERO SECTION
+      ===============================
+    */
+    header {
+      background: linear-gradient(
+        to right,
+        rgba(247,201,67, 0.95),
+        rgba(230,76,60, 0.95)
+      ), 
+      url("hero-bg.jpeg") center/cover no-repeat; 
+      /* NOTE: Replace 'hero-bg.jpeg' with a suitable background image */
+      padding: 4rem 1rem;
+      text-align: center;
+      color: var(--white);
+    }
+    .logo {
+      max-width: 100px;
+      margin: 0 auto 1rem;
+    }
+    .hero-title {
+      font-size: var(--h1-size);
+      margin-bottom: 1rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+    .hero-subtitle {
+      font-size: var(--p-size);
+      max-width: 600px;
+      margin: 0 auto 2rem;
       line-height: 1.4;
     }
-
-    /* HEADER */
-    header {
-      background-color: var(--gold);
+    .hero-cta {
+      display: inline-block;
+      background-color: var(--black);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .hero-cta:hover {
+      background-color: var(--white);
       color: var(--black);
-      text-align: center;
-      padding: 2em 1em;
     }
-    header img {
-      max-width: 130px;
-      margin-bottom: 0.75em;
+
+    /* 
+      ===============================
+      MAIN 
+      ===============================
+    */
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
-    header h1 {
-      font-size: 1.8em;
-      font-weight: normal;
+
+    /* 
+      ===============================
+      SECTION TITLES
+      ===============================
+    */
+    .section-title {
+      font-size: var(--h2-size);
+      color: var(--black);
+      margin: 3rem 0 1.5rem 0;
+      position: relative;
+      text-transform: uppercase;
       letter-spacing: 1px;
     }
-
-    /* MAIN CONTAINER */
-    main {
-      max-width: 900px;
-      margin: 2em auto;
-      padding: 0 1em;
+    .section-title::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 4px;
+      background-color: var(--gold);
+      bottom: -8px;
+      left: 0;
     }
 
-    /* PROMO TEXT */
-    .promo-text {
-      text-align: center;
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-bottom: 1.5em;
-    }
-
-    /* GAME DESCRIPTION */
+    /* 
+      ===============================
+      DESCRIPTION SECTION 
+      ===============================
+    */
     .description {
       text-align: center;
-      margin-bottom: 2em;
+      margin-bottom: 2rem;
+      font-size: var(--p-size);
     }
     .description p {
-      margin-bottom: 1em;
+      margin-bottom: 1rem;
+    }
+    .description a {
+      text-decoration: underline;
+      color: var(--accent-red);
     }
 
-    /* SECTION TITLES */
-    .section-title {
-      font-size: 1.2em;
-      color: var(--dark-grey);
-      border-left: 6px solid var(--gold);
-      padding-left: 12px;
-      margin: 2em 0 1.2em 0;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    /* 
+      ===============================
+      VIDEO CONTAINER
+      ===============================
+    */
+    .video-section {
+      text-align: center;
+      margin-bottom: 3rem;
     }
-
-    /* VIDEO CONTAINER */
     .video-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 2em;
+      display: inline-block;
+      width: 100%;
+      max-width: 600px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      overflow: hidden;
     }
     .video-container video {
       width: 100%;
-      max-width: 500px; /* Smaller video size */
-      border: 2px solid var(--light-grey);
-      border-radius: 6px;
+      display: block;
     }
 
-    /* SCREENSHOTS GALLERY */
+    /* 
+      ===============================
+      SCREENSHOTS GALLERY
+      ===============================
+    */
     .screenshots {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: center;
-      margin-bottom: 2em;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-bottom: 3rem;
     }
     .screenshots img {
-      border: 2px solid var(--light-grey);
+      width: 100%;
+      object-fit: cover;
       border-radius: 6px;
-      max-width: 180px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
 
-    /* APP STORE LINK (Gold button, black text) */
-    .appstore-link-wrapper {
+    /* 
+      ===============================
+      APP STORE LINK
+      ===============================
+    */
+    .download-button-wrapper {
       text-align: center;
-      margin: 2em 0;
+      margin: 2rem 0 4rem 0;
     }
-    .appstore-link {
+    .download-button {
       display: inline-block;
       background-color: var(--gold);
       color: var(--black);
       text-decoration: none;
       font-weight: bold;
-      padding: 0.75em 1.5em;
+      padding: 1rem 2rem;
       border-radius: 30px;
-      border: 2px solid var(--gold);
       transition: background-color 0.3s, color 0.3s;
+      border: 2px solid var(--gold);
     }
-    .appstore-link:hover {
+    .download-button:hover {
       background-color: var(--black);
       color: var(--white);
     }
 
-    /* LINKS SECTION */
+    /* 
+      ===============================
+      LINKS SECTION
+      ===============================
+    */
     .links-container {
       text-align: center;
-      margin-bottom: 2em;
-      line-height: 1.6;
+      margin-bottom: 4rem;
+      font-size: var(--small-size);
+    }
+    .links-container p {
+      margin: 0.5rem 0;
     }
     .links-container a {
       color: var(--black);
       background-color: var(--gold);
-      padding: 0.5em 1em;
+      padding: 0.5rem 1rem;
       border-radius: 4px;
-      text-decoration: none;
       font-weight: bold;
-      transition: opacity 0.3s;
       border: 2px solid var(--gold);
+      transition: opacity 0.3s;
+      text-decoration: none;
     }
     .links-container a:hover {
       opacity: 0.8;
     }
-    .links-container p {
-      margin: 0.5em 0;
-    }
 
-    /* FOOTER */
+    /* 
+      ===============================
+      FOOTER
+      ===============================
+    */
     footer {
-      background-color: var(--gold);
-      color: var(--black);
+      background-color: var(--light-grey);
       text-align: center;
-      padding: 1.5em;
-      margin-top: 3em;
+      padding: 1rem;
+      margin-top: 4rem;
+      font-size: var(--small-size);
     }
     footer p {
-      margin-bottom: 0.3em;
+      margin-bottom: 0.3rem;
+      color: var(--black);
     }
     footer a {
-      color: var(--black);
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer a:hover {
+      color: var(--accent-red);
       text-decoration: underline;
     }
 
-    /* RESPONSIVE */
+    /* 
+      ===============================
+      RESPONSIVE
+      ===============================
+    */
     @media (max-width: 600px) {
-      .screenshots img {
-        max-width: 100%;
+      .hero-title {
+        font-size: 1.75rem;
+      }
+      .hero-subtitle {
+        font-size: 0.95rem;
+      }
+      .section-title::before {
+        width: 30px;
       }
     }
-
   </style>
 </head>
 <body>
-
-  <!-- HEADER -->
+  <!-- HEADER / HERO SECTION -->
   <header>
-    <img src="logo.png" alt="CrazyRubic Logo">
-    <h1>CrazyRubic</h1>
+    <img src="logo.png" alt="CrazyRubic Logo" class="logo">
+    <h1 class="hero-title">CrazyRubic</h1>
+    <p class="hero-subtitle">
+      Spin, Dodge &amp; Survive in the Volcanic Chaos! Challenge your reflexes in a world of molten mayhem.
+    </p>
+    <a href="#download" class="hero-cta">Download Now</a>
   </header>
 
   <!-- MAIN CONTENT -->
   <main>
-    <!-- PROMO TEXT -->
-    <div class="promo-text">
-      Spin, Dodge &amp; Survive in the Volcanic Chaos!
-    </div>
-
-    <!-- DESCRIPTION -->
-    <div class="description">
+    <!-- DESCRIPTION SECTION -->
+    <section class="description">
       <p>
-        Prepare your wits and reflexes as you swirl through a lava-scorched world.
-        In CrazyRubic, every second is a chance to climb higher, dodge faster, 
-        and outlast the storm of molten obstacles.
+        Prepare your reflexes as you swirl through a lava-scorched world. In CrazyRubic, 
+        every second is a chance to climb higher, dodge faster, and outlast waves of molten obstacles.
       </p>
       <p>
-        Ready to test your skills? Challenge the chaos and see how long you can survive.
+        Earn your spot at the top of the global leaderboard, master your spins, and dominate 
+        the volcanic chaos. How long will you survive?
       </p>
       <p>
-        By using this app, you agree to the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple Standard EULA</a>.
+        By using this app, you agree to the 
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple Standard EULA</a>.
       </p>
-    </div>
+    </section>
 
-    <!-- VIDEO -->
-    <h2 class="section-title">Game Preview</h2>
-    <div class="video-container">
-      <video controls poster="1.jpeg">
-        <source src="promo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    <!-- VIDEO SECTION -->
+    <section class="video-section">
+      <h2 class="section-title">Game Preview</h2>
+      <div class="video-container">
+        <video controls poster="1.jpeg">
+          <source src="promo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
 
-    <!-- SCREENSHOTS -->
-    <h2 class="section-title">Screenshots</h2>
-    <div class="screenshots">
-      <img src="1.jpeg" alt="Screenshot 1">
-      <img src="2.jpeg" alt="Screenshot 2">
-      <img src="3.jpeg" alt="Screenshot 3">
-      <img src="4.jpeg" alt="Screenshot 4">
-      <img src="5.jpeg" alt="Screenshot 5">
-      <img src="6.jpeg" alt="Screenshot 6">
-      <img src="7.jpeg" alt="Screenshot 7">
-      <img src="8.jpeg" alt="Screenshot 8">
-      <img src="9.jpeg" alt="Screenshot 9">
-      <img src="10.jpeg" alt="Screenshot 10">
-    </div>
+    <!-- SCREENSHOTS GALLERY -->
+    <section>
+      <h2 class="section-title">Screenshots</h2>
+      <div class="screenshots">
+        <img src="1.jpeg" alt="Screenshot 1">
+        <img src="2.jpeg" alt="Screenshot 2">
+        <img src="3.jpeg" alt="Screenshot 3">
+        <img src="4.jpeg" alt="Screenshot 4">
+        <img src="5.jpeg" alt="Screenshot 5">
+        <img src="6.jpeg" alt="Screenshot 6">
+        <img src="7.jpeg" alt="Screenshot 7">
+        <img src="8.jpeg" alt="Screenshot 8">
+        <img src="9.jpeg" alt="Screenshot 9">
+        <img src="10.jpeg" alt="Screenshot 10">
+      </div>
+    </section>
 
     <!-- APP STORE LINK BUTTON -->
-    <div class="appstore-link-wrapper">
+    <section id="download" class="download-button-wrapper">
       <a 
-        class="appstore-link" 
+        class="download-button" 
         href="https://apps.apple.com/ch/app/crazyrubic/id6740188562?l=en-GB" 
         target="_blank"
       >
         Download on the App Store
       </a>
-    </div>
+    </section>
 
     <!-- PRIVACY & ATTRIBUTION LINKS -->
-    <div class="links-container">
+    <section class="links-container">
       <p>
         <a href="https://artur-dobysh.github.io/CrazyRubic_Privacy_Policy/" target="_blank">Privacy Policy</a>
       </p>
       <p>
         <a href="https://artur-dobysh.github.io/CrazyRubic_Attribution/" target="_blank">Attribution &amp; Credits</a>
       </p>
-    </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
   <footer>
     <p>© 2025 Artur Dobysh. All Rights Reserved.</p>
   </footer>
-
 </body>
 </html>
-
 
