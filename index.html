@@ -26,6 +26,7 @@
       --base-font-size: 16px;
       --h1-size: 2rem;
       --h2-size: 1.5rem;
+      --h3-size: 1.2rem;
       --p-size: 1rem;
       --small-size: 0.875rem;
     }
@@ -68,7 +69,7 @@
         rgba(230,76,60, 0.95)
       ), 
       url("hero-bg.jpeg") center/cover no-repeat;
-      /* NOTE: Replace 'hero-bg.jpeg' with a suitable background image */
+      /* Replace 'hero-bg.jpeg' with a suitable background image */
       padding: 4rem 1rem;
       text-align: center;
       color: var(--white);
@@ -126,6 +127,7 @@
       position: relative;
       text-transform: uppercase;
       letter-spacing: 1px;
+      text-align: center;
     }
     .section-title::before {
       content: "";
@@ -134,7 +136,8 @@
       height: 4px;
       background-color: var(--gold);
       bottom: -8px;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     /* 
@@ -144,11 +147,14 @@
     */
     .description {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       font-size: var(--p-size);
     }
     .description p {
       margin-bottom: 1rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .description a {
       text-decoration: underline;
@@ -157,7 +163,77 @@
 
     /* 
       ===============================
-      VIDEO CONTAINER
+      OPTIONAL: FEATURES SECTION
+      ===============================
+    */
+    .features-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .feature-card {
+      flex: 1 1 250px;
+      background: var(--light-grey);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .feature-card h3 {
+      margin-bottom: 1rem;
+      font-size: var(--h3-size);
+      color: var(--accent-red);
+    }
+    .feature-card p {
+      font-size: 0.95rem;
+    }
+
+    /* 
+      ===============================
+      HOW TO PLAY SECTION
+      ===============================
+    */
+    .how-to-play {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3rem;
+      gap: 2rem;
+    }
+    .how-to-text {
+      flex: 1 1 350px;
+    }
+    .how-to-text h3 {
+      font-size: var(--h3-size);
+      margin-bottom: 1rem;
+      color: var(--black);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .how-to-text ul {
+      list-style: disc inside;
+      padding-left: 1rem;
+    }
+    .how-to-text li {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .how-to-image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .how-to-image img {
+      max-width: 250px;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* 
+      ===============================
+      VIDEO SECTION
       ===============================
     */
     .video-section {
@@ -188,7 +264,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 1rem;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
     .screenshots img {
       width: 100%;
@@ -199,31 +275,40 @@
 
     /* 
       ===============================
-      FEATURES SECTION (OPTIONAL EXAMPLE)
+      TESTIMONIALS SECTION
       ===============================
     */
-    .features-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-    .feature-card {
-      flex: 1 1 250px;
-      background: var(--light-grey);
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    .testimonials-section {
+      margin-bottom: 4rem;
       text-align: center;
     }
-    .feature-card h3 {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      color: var(--accent-red);
+    .testimonials-container {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto; /* Scroll horizontally if needed */
+      gap: 2rem;
+      padding-bottom: 1rem;
+      justify-content: center;
+      scroll-snap-type: x mandatory;
     }
-    .feature-card p {
-      font-size: 0.95rem;
+    .testimonial-card {
+      flex: 0 0 250px;
+      background: var(--light-grey);
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      margin: 0 0.5rem;
+      scroll-snap-align: start;
+    }
+    .testimonial-card p {
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: var(--dark-grey);
+    }
+    .testimonial-author {
+      font-weight: bold;
+      color: var(--black);
     }
 
     /* 
@@ -275,7 +360,7 @@
     }
     .links-box h3 {
       margin-bottom: 1rem;
-      font-size: 1.1rem;
+      font-size: var(--h3-size);
       color: var(--black);
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -294,6 +379,52 @@
     }
     .links-box a:hover {
       opacity: 0.8;
+    }
+
+    /* 
+      ===============================
+      SOCIAL / CONNECT SECTION (OPTIONAL)
+      ===============================
+    */
+    .social-section {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .social-heading {
+      font-size: var(--h2-size);
+      margin-bottom: 1.5rem;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .social-heading::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 4px;
+      background-color: var(--gold);
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .social-links a {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--black);
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+    .social-links a:hover {
+      background: var(--black);
+      color: var(--white);
     }
 
     /* 
@@ -336,6 +467,10 @@
         flex-direction: column;
         align-items: center;
       }
+      .how-to-play {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -345,22 +480,21 @@
     <img src="logo.png" alt="CrazyRubic Logo" class="logo">
     <h1 class="hero-title">CrazyRubic</h1>
     <p class="hero-subtitle">
-      Spin, Dodge &amp; Survive in the Volcanic Chaos! Challenge your reflexes in a world of molten mayhem.
+      Spin, Dodge &amp; Survive in a Volcanic Chaos! Challenge your reflexes with fast-paced action and molten mayhem.
     </p>
     <a href="#download" class="hero-cta">Download Now</a>
   </header>
 
   <!-- MAIN CONTENT -->
   <main>
+
     <!-- DESCRIPTION SECTION -->
     <section class="description">
       <p>
-        Prepare your reflexes as you swirl through a lava-scorched world. In CrazyRubic, 
-        every second is a chance to climb higher, dodge faster, and outlast waves of molten obstacles.
+        Welcome to <strong>CrazyRubic</strong>, a fiery arcade-style adventure where quick reflexes and strategy determine your fate. Battle through rising lava levels, dodge fearsome obstacles, and aim for the top of the global leaderboards.
       </p>
       <p>
-        Earn your spot at the top of the global leaderboard, master your spins, and dominate 
-        the volcanic chaos. How long can you survive?
+        Enjoy seamless gameplay, intuitive controls, and a never-ending swirl of molten twists. Are you ready for the ultimate volcanic test?
       </p>
       <p>
         By using this app, you agree to the 
@@ -370,19 +504,39 @@
 
     <!-- OPTIONAL: FEATURES SECTION -->
     <section>
-      <h2 class="section-title">Why You'll Love It</h2>
+      <h2 class="section-title">Key Features</h2>
       <div class="features-section">
         <div class="feature-card">
           <h3>Fast-Paced Action</h3>
-          <p>Experience quick, heart-pounding gameplay that tests your reflexes and keeps you on the edge of your seat.</p>
+          <p>Experience quick, heart-pounding gameplay that tests every ounce of your reflexes and keeps you on the edge of your seat.</p>
         </div>
         <div class="feature-card">
           <h3>Global Leaderboards</h3>
-          <p>Compete with players from around the world. Climb the charts and prove you’re the ultimate CrazyRubic master.</p>
+          <p>Compete with players worldwide. Climb the charts, overthrow the competition, and prove you’re the top CrazyRubic contender.</p>
         </div>
         <div class="feature-card">
-          <h3>Ever-Evolving Challenges</h3>
-          <p>Dodge new hazards and master fresh obstacles as you progress. No run is ever the same!</p>
+          <h3>Endless Variety</h3>
+          <p>No two runs are alike! Dodge fresh hazards and adapt to shifting lava flows each time you play.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO PLAY -->
+    <section>
+      <h2 class="section-title">How to Play</h2>
+      <div class="how-to-play">
+        <div class="how-to-text">
+          <h3>Getting Started</h3>
+          <ul>
+            <li><strong>Tap &amp; Hold:</strong> Control your CrazyRubic as it spins.</li>
+            <li><strong>Dodge Obstacles:</strong> Avoid lava blocks and spinning flames.</li>
+            <li><strong>Collect Boosts:</strong> Snag power-ups that grant bursts of speed or temporary invincibility.</li>
+            <li><strong>Challenge Yourself:</strong> Each second survived increases difficulty and reward.</li>
+          </ul>
+        </div>
+        <div class="how-to-image">
+          <!-- Replace with relevant image or animation showing gameplay controls. -->
+          <img src="howtoplay.png" alt="How to Play Example">
         </div>
       </div>
     </section>
@@ -415,6 +569,25 @@
       </div>
     </section>
 
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section">
+      <h2 class="section-title">What Players Say</h2>
+      <div class="testimonials-container">
+        <div class="testimonial-card">
+          <p>"CrazyRubic takes mobile gaming to a new level—it's fast, fun, and incredibly addictive!"</p>
+          <div class="testimonial-author">- GamerGuy42</div>
+        </div>
+        <div class="testimonial-card">
+          <p>"I love the quick sessions. Perfect for short breaks, but then I end up playing for hours!"</p>
+          <div class="testimonial-author">- Sarah B.</div>
+        </div>
+        <div class="testimonial-card">
+          <p>"There's always something new to dodge or spin around. Can't put it down!"</p>
+          <div class="testimonial-author">- Leo K.</div>
+        </div>
+      </div>
+    </section>
+
     <!-- APP STORE LINK BUTTON -->
     <section id="download" class="download-button-wrapper">
       <a 
@@ -441,6 +614,18 @@
         </a>
       </div>
     </section>
+
+    <!-- SOCIAL / CONNECT SECTION (OPTIONAL) -->
+    <section class="social-section">
+      <h2 class="social-heading">Stay Connected</h2>
+      <p>Follow us on social media or sign up for our newsletter to get the latest updates!</p>
+      <div class="social-links">
+        <!-- Replace with actual links/icons -->
+        <a href="#" target="_blank">Twitter</a>
+        <a href="#" target="_blank">Discord</a>
+        <a href="#" target="_blank">Instagram</a>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -449,5 +634,6 @@
   </footer>
 </body>
 </html>
+
 
 
