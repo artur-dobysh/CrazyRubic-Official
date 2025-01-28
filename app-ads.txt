@@ -1,0 +1,4 @@
+# app-ads.txt for CrazyRubic
+
+# Google AdMob
+google.com, pub-9961991306832907, DIRECT, f08c47fec0942fa0
