@@ -116,7 +116,7 @@
 
     /* 
       ===============================
-      SECTION TITLES
+      SECTION TITLES (H2)
       ===============================
     */
     .section-title {
@@ -137,6 +137,19 @@
       bottom: -8px;
       left: 50%;
       transform: translateX(-50%);
+    }
+
+    /* 
+      ===============================
+      SUB-HEADING (H3) STYLE
+      ===============================
+    */
+    .sub-heading {
+      color: var(--accent-red);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: var(--h3-size);
+      text-transform: uppercase;
     }
 
     /* 
@@ -278,13 +291,6 @@
       max-width: 800px;
       margin: 0 auto 3rem auto;
       line-height: 1.5;
-    }
-    .detailed-gameplay h3 {
-      color: var(--accent-red);
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-      font-size: var(--h3-size);
-      text-transform: uppercase;
     }
     .detailed-gameplay p {
       margin-bottom: 1rem;
@@ -705,17 +711,17 @@
       <p>
         CrazyRubic is about careful timing, quick reflexes, and on-the-fly decision-making. As you move forward across dangerous terrain, lava rises, and new waves of enemies appear.
       </p>
-      <h3>Combo System</h3>
+      <h3 class="sub-heading">Combo System</h3>
       <p>
         Each monster you defeat increases your combo meter. String together multiple monster kills without getting hit to unlock special streak rewards—like bonus coins or short bursts of invincibility.
       </p>
-      <h3>Level Progression</h3>
+      <h3 class="sub-heading">Level Progression</h3>
       <ul>
         <li><strong>Obstacle Count:</strong> Each obstacle destroyed ramps up the difficulty.</li>
         <li><strong>Monster Slay Rewards:</strong> Slaying monsters quickly can trigger big coin multipliers.</li>
         <li><strong>Adaptive Speed:</strong> As you survive longer, your hero speeds up and lava obstacles multiply.</li>
       </ul>
-      <h3>Randomized Hazards</h3>
+      <h3 class="sub-heading">Randomized Hazards</h3>
       <p>
         Watch out for chasing meteors, lava pits, and spinning fire. No two runs are alike!
       </p>
@@ -739,15 +745,16 @@
         From celestial guardians to volcanic warriors, each Rubic hero has unique lore. 
         Choose your planet environment—from Mercury’s scorching wastes to Neptune’s icy plains—for fresh challenges.
       </p>
-      <h3>Heroes</h3>
+
+      <h3 class="sub-heading">Heroes</h3>
       <ul>
         <li><strong>Tiger Stone Rubic</strong> – Fierce amber stripes conjure primal spirits.</li>
         <li><strong>Silver Rubic</strong> – Lunar metal that reflects blows like moonlight.</li>
         <li><strong>Lapis Lazuli Rubic</strong> – Harnesses tidal spells from ocean depths.</li>
-        <li><strong>... plus 12 more unique hero forms!</strong></li>
+        <li><strong>... plus more unique hero forms!</strong></li>
       </ul>
 
-      <h3>Planets</h3>
+      <h3 class="sub-heading">Planets</h3>
       <p>
         Every planet changes the lava type and background aesthetic. Brave Mercury’s scorching surface or hop among Saturn’s rings—each location demands new strategies.
       </p>
@@ -781,7 +788,7 @@
         Defeating multiple enemies quickly can yield big combos or special drops.
       </p>
       <div class="monster-grid">
-        <!-- Updated monster images as requested -->
+        <!-- Updated monster images with sub-heading style already used above -->
         <div class="monster-card">
           <img src="brown.png" alt="Brown Monster">
           <h4>Brown Crusher</h4>
@@ -914,6 +921,7 @@
   </footer>
 </body>
 </html>
+
 
 
 </html>
