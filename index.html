@@ -7,8 +7,14 @@
   <meta name="author" content="Artur Dobysh">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FONT AWESOME (BRANDS) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- FONT AWESOME (v6) -->
+  <!-- Using a reliable CDN link for FA 6, so that brand icons will work -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+  />
 
   <title>CrazyRubic - Official Website</title>
 
@@ -571,7 +577,7 @@
     }
     /* Each link holds an icon; set color and size here */
     .social-links a {
-      color: red;
+      color: black;
       font-size: 48px;
       transition: color 0.3s, opacity 0.3s;
       text-decoration: none;
@@ -917,13 +923,12 @@
       <div class="social-links">
         <!-- Instagram Link -->
         <a href="https://www.instagram.com/crazyrubic/" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-instagram"></i>
+          <i class="fab fa-instagram"></i> <!-- 'fab' for Font Awesome brand icons -->
         </a>
         <!-- Facebook Link -->
         <a href="https://www.facebook.com/profile.php?id=61572398047212" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fab fa-facebook-f"></i> <!-- 'fab' for Font Awesome brand icons -->
         </a>
-        <!-- Optional: Add more social links here -->
       </div>
     </section>
 
@@ -935,5 +940,6 @@
   </footer>
 </body>
 </html>
+
 
 
