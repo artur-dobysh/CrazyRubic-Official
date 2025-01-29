@@ -1,6 +1,7 @@
 # CrazyRubic
 
-![CrazyRubic Logo](logo.png)
+![CrazyRubic Logo](logo.png){ width=100px }
+
 
 Spin, Dodge & Survive in a Volcanic Chaos! Challenge your reflexes with fast-paced action and molten mayhem.
 
