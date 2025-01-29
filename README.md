@@ -38,7 +38,7 @@ Below is a short game preview video (example link only).
 
 [Promo Video (MP4)](promo.mp4)
 
-*(Poster image: `![Poster Image](1.jpeg)`)*
+
 
 ---
 
