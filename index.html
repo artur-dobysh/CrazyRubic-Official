@@ -6,13 +6,13 @@
   <meta name="keywords" content="bubble, spin, slice, moon, planet, neptune, space, monster, stone, jump, smash, lava, adventure, go">
   <meta name="author" content="Artur Dobysh">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Font Awesome -->
+
+  <!-- FONT AWESOME (BRANDS) -->
   <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-    integrity="sha512-pqN+1/6jXH4c7iPpEoqC0EcbGKGXqaM59f9pK0NQZFtwfCMJKlA+fLxv/NF+hK3jHc0I0HZvY1r+2Iv4dlTJoQ==" 
-    crossorigin="anonymous" 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pqN+1/6jXH4c7iPpEoqC0EcbGKGXqaM59f9pK0NQZFtwfCMJKlA+fLxv/NF+hK3jHc0I0HZvY1r+2Iv4dlTJoQ=="
+    crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
 
@@ -568,13 +568,19 @@
       transform: translateX(-50%);
     }
 
-    /* Combined styling for .social-icon to avoid conflicts */
+    /* Unified Social Icon Styles */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    /* Each link holds an icon; set color and size here */
     .social-links a {
-      display: inline-block;
-      margin: 0 10px;
       color: #555;
+      font-size: 24px;
       transition: color 0.3s, opacity 0.3s;
-      font-size: 24px; /* Adjust icon size if you like */
+      text-decoration: none;
     }
     .social-links a:hover {
       color: #000;
@@ -917,11 +923,11 @@
       <div class="social-links">
         <!-- Instagram Link -->
         <a href="https://www.instagram.com/crazyrubic/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-instagram"></i>
+          <i class="fa-brands fa-instagram"></i>
         </a>
         <!-- Facebook Link -->
         <a href="https://www.facebook.com/profile.php?id=61572398047212" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-facebook-f"></i>
+          <i class="fa-brands fa-facebook-f"></i>
         </a>
         <!-- Optional: Add more social links here -->
       </div>
@@ -935,4 +941,5 @@
   </footer>
 </body>
 </html>
+
 
