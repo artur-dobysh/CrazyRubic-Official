@@ -31,17 +31,6 @@ By using this app, you agree to the [Apple Standard EULA](https://www.apple.com/
 
 ---
 
-## Game Preview
-
-Below is a short game preview video (example link only).  
-*(Note: Markdown can’t directly embed a playable video in GitHub’s preview — typically it will appear as a link. You could embed an `<video>` tag in raw HTML, though.)*
-
-[Promo Video (MP4)](promo.mp4)
-
-
-
----
-
 ## What Players Say
 
 > “CrazyRubic takes mobile gaming to a new level—it's fast, fun, and incredibly addictive!”  
