@@ -1,6 +1,7 @@
 # CrazyRubic
 
-![CrazyRubic Logo](logo.png){ width=100px }
+<img src="logo.png" alt="CrazyRubic Logo" style="width: 100px; height: auto; display: block; margin: 0 auto 1rem;" />
+
 
 
 Spin, Dodge & Survive in a Volcanic Chaos! Challenge your reflexes with fast-paced action and molten mayhem.
